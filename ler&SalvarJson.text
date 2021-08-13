@@ -1,0 +1,14 @@
+var ler = (arquivo) => {
+  const fs = require("fs");
+  if (!fs.existsSync(arquivo)) return "Arquivo não existe.";
+  const data = fs.readFileSync(arquivo, "utf-8");
+  const objeto = JSON.parse(data.toString());
+  return objeto;
+};
+
+var salvar = (arquivo, objeto) => {
+  const objetoJson = JSON.stringify(objeto);
+  const fs = require("fs");
+  fs.writeFileSync(arquivo, objetoJson);
+  console.log("Json salvo.");
+};

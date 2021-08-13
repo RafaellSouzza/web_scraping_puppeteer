@@ -1,0 +1,60 @@
+/* get element 
+ filme.url =
+            document.getElementsByClassName("item")[j].children[0].href;
+          filme.titulo =
+            document.getElementsByClassName("item")[j].children[0].title;
+          filme.imdb =
+            document.getElementsByClassName("item")[
+              j
+            ].children[0].children[0].children[1].innerText;
+          filme.imgURL =
+            document.getElementsByClassName("item")[
+              j
+            ].children[0].children[0].children[3].src;
+          filme.html = document.getElementsByClassName("item")[j].innerHTML;
+*/
+
+/* get element a
+ const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url);
+      page.w
+      const html = await page.evaluate(() =>
+        Array.from(document.querySelectorAll("div.item > a"), (element) => {
+          let obj = {
+            href: element.href,
+            title: element.title,
+            genero: location.href.split("genero/")[1].split("/")[0],
+          };
+          return obj;
+        })
+      );
+
+*/
+
+
+
+/*
+const numeropage = await page.evaluate(() => {
+      const href = document.getElementsByClassName("last")[0].href;
+      let numpage = href.split("page/")[1].split("/")[0];
+      return parseInt(numpage);
+    });
+    console.log(`Numeros de Paginas de ${categoria}:${numeropage}`);
+
+    for (var i = 1; i <= numeropage; i++) {
+      let url = ``;
+      if (i == 1) url = `https://www.baixafilme.net/genero/${categoria}/`;
+      if (i > 1)
+        url = `https://www.baixafilme.net/genero/${categoria}/page/${i}/`;
+        
+        const fs = require("fs");
+        const data = fs.readFileSync(`urlPage.json`, "utf-8");
+        const objeto = JSON.parse(data.toString());
+        
+        objeto.push(url)
+        const objetoJson = JSON.stringify(objeto);
+        fs.writeFileSync(`urlPage.json`, objetoJson);
+    }
+*/
+*/
